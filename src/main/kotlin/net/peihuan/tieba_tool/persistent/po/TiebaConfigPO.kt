@@ -15,6 +15,9 @@ data class TiebaConfigPO(
     @TableField("`desc`")
     val desc: String,
     var type: ConfigType,
+    var lastReplyTime: Date?,
+    // 回帖间隔秒数
+    val frequency: Int,
     @TableLogic
     val deleted: Boolean,
     val createTime: Date,
